@@ -7,7 +7,6 @@ Each test is dict with
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
 
-
 TESTS = {
     "Basics": [
         {
@@ -23,11 +22,33 @@ TESTS = {
                 'tin-iron': (1, 2),
                 'iron-copper': (1, 2),
                 'copper-tin': (1, 2),
-                },
+            },
             "answer": [1, 4],
-            "explanation": "5+7=?"
-        }
+        },
+        {
+            "input": {
+                'iron-tin': (2, 3),
+                'iron-copper': (1, 4),
+                'iron-gold': (1, 2)
+            },
+            "answer": [7, 24]
+        },
+        {
+            "input": {
+                'gold-copper': (2, 7),
+                'iron-gold': (1, 2),
+                'tin-gold': (1, 2),
+                'copper-tin': (5, 9)
+            },
+            "answer": [1, 7]}
     ],
     "Extra": [
+        {
+            "input": {
+                'gold-tin': (1, 19),
+                'tin-copper': (2, 37),
+                'iron-tin': (5, 6)
+            },
+            "answer": [697, 8436]}
     ]
 }
