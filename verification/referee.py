@@ -4,11 +4,22 @@ from checkio.referees.io import CheckiOReferee
 
 from tests import TESTS
 
+cover = """def cover(func, data):
+    from fractions import Fraction
+    fdata = dict([(k, Fraction(*v)) for k, v in data.values()])
+    res = func(fdata)
+    if not isinstance(res, Fraction):
+        raise TypeError("Result must be Fraction")
+    return res
+"""
+
+
+
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
         cover_code={
-            'python-27': None,
-            'python-3': None
+            'python-27': cover,
+            'python-3': cover
         }).on_ready)
