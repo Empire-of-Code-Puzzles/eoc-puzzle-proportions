@@ -36,19 +36,18 @@ TESTS = {
         {
             "input": {
                 'gold-copper': (2, 7),
-                'iron-gold': (1, 2),
                 'tin-gold': (1, 2),
                 'copper-tin': (5, 9)
             },
-            "answer": [1, 7]}
+            "answer": [29, 252]}
     ],
     "Extra": [
         {
             "input": {
-                'gold-tin': (1, 19),
-                'tin-copper': (2, 37),
-                'iron-tin': (5, 6)
+                'gold-tin': (6, 19),
+                'tin-copper': (22, 37),
+                'iron-tin': (2, 7)
             },
-            "answer": [697, 8436]}
+            "answer": [2143, 9842]}
     ]
 }
