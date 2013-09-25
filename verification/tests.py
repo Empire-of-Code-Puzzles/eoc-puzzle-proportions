@@ -11,9 +11,9 @@ TESTS = {
     "Basics": [
         {
             "input": {
-                'gold-tin': (1, 2),
-                'gold-iron': (1, 3),
-                'gold-copper': (1, 4),
+                'gold-tin': [1, 2],
+                'gold-iron': [1, 3],
+                'gold-copper': [1, 4],
             },
             "answer": [1, 24]
         },

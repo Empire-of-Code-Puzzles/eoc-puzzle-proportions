@@ -7,7 +7,7 @@ from fractions import Fraction
 
 cover = """def cover(func, data):
     from fractions import Fraction
-    fdata = dict([(k, Fraction(*v)) for k, v in data.values()])
+    fdata = dict([(k, Fraction(*v)) for k, v in data.items()])
     res = func(fdata)
     if not isinstance(res, Fraction):
         raise TypeError("Result must be Fraction")
