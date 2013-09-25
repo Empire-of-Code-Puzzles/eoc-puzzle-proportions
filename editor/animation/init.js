@@ -41,8 +41,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
             var checkioInput = data.in;
 
+            var strInput = JSON.stringify(checkioInput).replace(/\[(\d+),(\d+)\]/g, "Fraction($1, $2)");
             if (data.error) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Fail: checkio(' + strInput + ')');
                 $content.find('.output').html(data.error.replace(/\n/g, ","));
 
                 $content.find('.output').addClass('error');
@@ -62,17 +63,17 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             //if you need additional info from tests (if exists)
             var explanation = data.ext["explanation"];
 
-            $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
+            $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult).replace(/\[(\d+),(\d+)\]/g, "Fraction($1, $2)"));
 
             if (!result) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
-                $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
+                $content.find('.call').html('Fail: checkio(' + strInput + ')');
+                $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult).replace(/\[(\d+),(\d+)\]/g, "Fraction($1, $2)"));
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
                 $content.find('.call').addClass('error');
             }
             else {
-                $content.find('.call').html('Pass: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Pass: checkio(' + strInput + ')');
                 $content.find('.answer').remove();
             }
             //Dont change the code before it
