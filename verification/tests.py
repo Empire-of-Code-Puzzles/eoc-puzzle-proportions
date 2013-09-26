@@ -35,6 +35,16 @@ TESTS = {
             "input": {'tin-copper': [22, 37], 'iron-tin': [2, 7], 'gold-tin': [6, 19]},
             "answer": [2143, 9842],
             "explanation": {'iron': [1847, 9842], 'tin': [965, 9842], 'copper': [4887, 9842], 'gold': [2143, 9842]}
+        },
+        {
+            "input": {'tin-copper': [6, 7], 'iron-copper': [3, 7], 'copper-gold': [3, 8]},
+            "answer": [5, 112],
+            "explanation": {'iron': [11, 112], 'tin': [59, 112], 'copper': [37, 112], 'gold': [5, 112]}
+        },
+        {
+            "input": {'iron-tin': [6, 17], 'copper-iron': [5, 8], 'tin-copper': [3, 4]},
+            "answer": [37, 272],
+            "explanation": {'iron': [31, 272], 'copper': [139, 272], 'tin': [65, 272], 'gold': [37, 272]}
         }
     ]
 }
