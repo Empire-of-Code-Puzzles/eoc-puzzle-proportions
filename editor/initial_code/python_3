@@ -1,6 +1,6 @@
 from fractions import Fraction
 
-METALS = ('gold', 'ore', 'iron', 'copper')
+METALS = ('gold', 'tin', 'iron', 'copper')
 
 
 def checkio(alloys):
