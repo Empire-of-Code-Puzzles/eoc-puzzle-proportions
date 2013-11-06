@@ -1,6 +1,6 @@
 from checkio.signals import ON_CONNECT
 from checkio import api
-from checkio.referees.io import CheckiOReferee
+from checkio.referees.io import CheckiORefereeLevels
 
 from tests import TESTS
 from fractions import Fraction
@@ -21,7 +21,7 @@ def checker(answer, user_result):
 
 api.add_listener(
     ON_CONNECT,
-    CheckiOReferee(
+    CheckiORefereeLevels(
         tests=TESTS,
         cover_code={
             'python-27': cover,
