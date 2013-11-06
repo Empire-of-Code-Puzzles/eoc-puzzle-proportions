@@ -8,11 +8,25 @@
 
 <p>
     The proportions are given as a dictionary where keys are alloy names and values are proportions.
-    The alloy names are presented as strings, which are composed of two metal names separated by a dash
+    The alloy names are presented as strings, which are composed of
+    {% if task_level == 1 %}
+    two
+    {%  endif %}
+    metals names separated by a dash
     (Ex: "gold-tin", "iron-copper", "iron-gold").
-    The proportions are presented as fractions (<strong>fractions.Fraction</strong> date type. 
+    The proportions are presented as fractions (<strong>fractions.Fraction</strong> date type.
     <a href="http://docs.python.org/2/library/fractions.html">Read about this module</a>).
 </p>
+<p>
+    {% if task_level > 1 %}
+        <strong>Level 2: </strong> For some case the task is not solvable. If solution does not exist, then return -1.
+    {% endif %}
+    {% if task_level > 2 %}
+        <br>
+        <strong>Level 3: </strong> The alloy names can contain more than two metal.
+    {% endif %}
+</p>
+
 <p style="text-align: center;">
     <img class="for_info_only"
          title="alloys"
@@ -29,9 +43,11 @@
     You should return proportion of gold in the bar as a fraction (<strong>fractions.Fraction</strong>).
 </p>
 
+{% if task_level == 1 %}
 <p>
     <strong>Precondition: </strong> All tests are solvable.
 </p>
+{% endif %}
 
 <p>
     <strong>Input: </strong> Alloys names and proportions. A dictionary.
