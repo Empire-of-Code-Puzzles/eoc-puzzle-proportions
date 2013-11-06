@@ -7,7 +7,7 @@ Each test is dict with
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
 
-TESTS = {
+TESTS_L1 = {
     "Basics": [
         {
             "input": {'gold-iron': [1, 3], 'gold-tin': [1, 2], 'gold-copper': [1, 4]},
@@ -48,3 +48,14 @@ TESTS = {
         }
     ]
 }
+
+TESTS_L2 = {
+    "Basics lvl.2": [
+        {"input": {'copper-iron': [5, 6], 'tin-copper': [3, 4], 'iron-tin': [6, 7]},
+         "answer": -1,
+         "explanation": {}
+        },
+    ]
+}
+
+TESTS = [TESTS_L1, TESTS_L2]
