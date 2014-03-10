@@ -45,6 +45,12 @@ TESTS = {
             "input": {'iron-tin': [6, 17], 'copper-iron': [5, 8], 'tin-copper': [3, 4]},
             "answer": [37, 272],
             "explanation": {'iron': [31, 272], 'copper': [139, 272], 'tin': [65, 272], 'gold': [37, 272]}
-        }
+        },
+        {"input": {'iron-copper': [1, 1000], 'iron-tin': [1, 1000], 'iron-gold': [999, 1000]},
+         "answer": [1997, 2000],
+         "explanation": {'copper': [1, 2000], 'gold': [1997, 2000], 'tin': [1, 2000], 'iron': [1, 2000]}},
+        {"input": {'gold-copper': [2, 3], 'gold-iron': [1, 3], 'gold-tin': [1, 3]},
+         "answer": [1, 6],
+         "explanation": {'tin': [1, 6], 'iron': [1, 6], 'copper': [1, 2], 'gold': [1, 6]}}
     ]
 }
