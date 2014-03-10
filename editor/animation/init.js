@@ -137,8 +137,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 for (var i = 0; i < 4; i++){
                     var p = partitions[metals[i]][0] / partitions[metals[i]][1];
                     angle2 = angle1 + Math.PI * 2 * p;
+
+                    console.log(angle2, angle1);
                     paper.path(Raphael.format(
-                        "M{0},{1}L{2},{3}A{6},{6},{7},0,1,{4},{5}Z",
+                        "M{0},{1}L{2},{3}A{6},{6},{7},{8},1,{4},{5}Z",
                         center[0],
                         center[1],
                         center[0] + Math.sin(angle1) * r,
@@ -146,7 +148,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                         center[0] + Math.sin(angle2) * r,
                         center[1] - Math.cos(angle2) * r,
                         r,
-                        angle2 - angle1
+                        angle2 - angle1,
+                        angle2 - angle1 > Math.PI ? 1 : 0
                     )).attr(attrs[metals[i]]);
                     angle1 = angle2;
                 }
