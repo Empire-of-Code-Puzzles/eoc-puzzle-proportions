@@ -1,0 +1,69 @@
+<p>
+    Наше трио нашло загадочный металлический брусок.
+    Похоже, что данный брусок состоит из различных металлов, таких как золото (gold),
+    железо (iron), медь (copper) и олово (tin).
+    Других металлов а данном бруске нет.
+    Мы не знаем количество каждого металла, но нам известны пропорции различных сплавов.
+    Для примера, пропорция золота и олова - 1/2, золота и железа -- 1/3, золота и меди -- 1/4.
+    "пропорция золота и олова - 1/2" означает олово и железо в сумме составляют 1/2 от всего бруска.
+    Вам необходимо найти пропорцию золота в бруске.
+</p>
+
+<p>
+    Пропорции даны, как словарь, где в качестве ключей выступают названия сплавов, а значения - их пропорции.
+    Название сплава представлено, как строка в которой два металла написаны через дефис.
+    (Примеры: "gold-tin", "iron-copper", "iron-gold").
+    Пропорции представлены как дроби (<strong>fractions.Fraction</strong> тип данных.
+    <a href="http://docs.python.org/2/library/fractions.html">подробней об этом модуле</a>).
+</p>
+<p style="text-align: center;">
+    <img class="for_info_only"
+         title="alloys"
+         src="{{MEDIA}}alloys.png"
+         alt="alloys"
+         width="600px"/>
+    <img class="for_editor_only"
+         title="alloys"
+         src="{{MEDIA}}alloys.png"
+         alt="alloys"
+         width="380px"/>
+</p>
+
+<p>
+    <strong>Input: </strong> Названия сплавов и пропорции, как словарь (dict).
+</p>
+
+<p>
+    <strong>Output: </strong> Пропорция золота (gold), как fractions.Fraction.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Примеры:</strong>
+    </p>
+    <pre class="brush: python">checkio({
+    'gold-tin': Fraction(1, 2),
+    'gold-iron': Fraction(1, 3),
+    'gold-copper': Fraction(1, 4),
+    }) == Fraction(1, 24)
+checkio({
+    'tin-iron': Fraction(1, 2),
+    'iron-copper': Fraction(1, 2),
+    'copper-tin': Fraction(1, 2),
+    }) == Fraction(1, 4)</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Зачем это нужно: </strong>
+    Эта задача покажет, как работать с типом данных Fraction.
+    Это очень полезный тип данных,если вам необходимо работать с дробями и избежать проблему округления
+    чисел с плавающей запятой.
+
+</p>
+
+<p>
+    <strong>Предусловия: </strong><br>
+    Все тесты имеют решение в положительных числах.<br>
+    Брусок содержит все 4 металла.<br>
+</p>
