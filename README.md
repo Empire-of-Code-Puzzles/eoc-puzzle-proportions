@@ -1,4 +1,6 @@
-checkio-task-how-much-gold
-==========================
+checkio-task-probably-dice
+========================
 
-Checkio Task "How much gold"
+Checkio Task "Probably Dice"
+
+

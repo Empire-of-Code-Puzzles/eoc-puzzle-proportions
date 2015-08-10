@@ -1,0 +1,15 @@
+METALS = ("Ad", "Ti", "Fe", "Cu")
+
+
+def adamantite_proportion(log):
+    return 1
+
+
+if __name__ == '__main__':
+    # These are only used for self-checking and are not necessary for auto-testing
+    def almost_equal(checked, correct, significant_digits=2):
+        precision = 0.1 ** significant_digits
+        return correct - precision < checked < correct + precision
+
+    assert almost_equal(adamantite_proportion("Ad+Ti=0.5,Ad+Fe=0.33,Ad+Cu=0.25"), 0.041), "1/24"
+    assert almost_equal(adamantite_proportion("Ti+Fe=0.5,Fe+Cu=0.5,Cu+Ti=0.5"), 0.25), "1/4"

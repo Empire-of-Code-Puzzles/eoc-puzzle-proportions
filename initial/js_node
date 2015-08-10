@@ -1,0 +1,22 @@
+var METALS = ["Ad", "Ti", "Fe", "Cu"];
+
+
+function adamantiteProportion(log) {
+    return 1;
+}
+
+
+var assert = require("assert");
+
+
+if (!global.is_checking) {
+    // These are only used for self-checking and are not necessary for auto-testing
+    var almostEqual = function (actual, expected, significantDigits) {
+        significantDigits = significantDigits || 2;
+        var precision = Math.pow(0.1, significantDigits);
+        return Math.abs(expected - actual) < precision;
+    };
+
+    assert(almostEqual(adamantiteProportion("Ad+Ti=0.5,Ad+Fe=0.33,Ad+Cu=0.25"), 0.041), "1/24");
+    assert(almostEqual(adamantiteProportion("Ti+Fe=0.5,Fe+Cu=0.5,Cu+Ti=0.5"), 0.25), "1/4");
+}
